@@ -1,7 +1,9 @@
-﻿using System.Text.Json.Serialization;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Queros.ProjectManagement.Data.Enums;
 using Queros.ProjectManagement.Data.Models;
+using TaskStatus = System.Threading.Tasks.TaskStatus;
 
 namespace Queros.ProjectManagement.Data.EntitiesConfigurations;
 
@@ -10,8 +12,8 @@ public class ProjectTaskConfiguration : IEntityTypeConfiguration<ProjectTask>
     public void Configure(EntityTypeBuilder<ProjectTask> builder)
     {
         builder.HasKey(x => x.Id);
-        builder.Property(x => x.Status).HasConversion<JsonStringEnumConverter>();
-        builder.Property(x => x.Priority).HasConversion<JsonStringEnumConverter>();
+        builder.Property(x => x.Status).HasConversion(new EnumToStringConverter<TaskStatus>());
+        builder.Property(x => x.Priority).HasConversion(new EnumToStringConverter<TaskPriority>());
         
         builder.HasOne<Project>(x => x.Project)
             .WithMany(x => x.ProjectTasks)

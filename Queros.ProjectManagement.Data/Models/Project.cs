@@ -15,6 +15,5 @@ public class Project
     public decimal Budget { get; set; }
     public string Owner { get; set; } = string.Empty;
     public ProjectStatus Status { get; set; }
-
     public virtual List<ProjectTask>? ProjectTasks { get; set; }
 }
