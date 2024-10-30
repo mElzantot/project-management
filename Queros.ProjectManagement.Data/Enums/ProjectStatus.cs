@@ -5,7 +5,7 @@ namespace Queros.ProjectManagement.Data.Enums;
 [JsonConverter(typeof(JsonStringEnumConverter))]
 public enum ProjectStatus
 {
-    ToDo,
+    NotStarted,
     InProgress,
     Completed
 }

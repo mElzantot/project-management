@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Queros.ProjectManagement.Data.EntitiesConfigurations;
 using Queros.ProjectManagement.Data.Enums;
-using TaskStatus = System.Threading.Tasks.TaskStatus;
 
 namespace Queros.ProjectManagement.Data.Models;
 
@@ -15,7 +14,7 @@ public class ProjectTask
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public TaskStatus Status { get; set; }
+    public ProjectTaskStatus Status { get; set; }
     public TaskPriority Priority { get; set; }
 
     public Guid ProjectId { get; set; }
