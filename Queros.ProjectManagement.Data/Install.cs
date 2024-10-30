@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Queros.ProjectManagement.Data.Repositories;
 
 namespace Queros.ProjectManagement.Data;
 
@@ -29,5 +30,9 @@ public static class Install
 
     private static void RegisterRepositories(IServiceCollection services)
     {
+        services.AddScoped<IProjectRepository, ProjectRepository>();
+        services.AddScoped<IProjectTaskRepository, ProjectTaskRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+
     }
 }

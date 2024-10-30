@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queros.ProjectManagement.AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queros.ProjectManagement.Data", "Queros.ProjectManagement.Data\Queros.ProjectManagement.Data.csproj", "{68D2FB37-447A-45BB-96D5-47D7AF4F6107}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queros.ProjectManagement", "Queros.ProjectManagement\Queros.ProjectManagement.csproj", "{E0432609-D07B-4690-B4AC-B56C809EFF4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{68D2FB37-447A-45BB-96D5-47D7AF4F6107}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D2FB37-447A-45BB-96D5-47D7AF4F6107}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D2FB37-447A-45BB-96D5-47D7AF4F6107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0432609-D07B-4690-B4AC-B56C809EFF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0432609-D07B-4690-B4AC-B56C809EFF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0432609-D07B-4690-B4AC-B56C809EFF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0432609-D07B-4690-B4AC-B56C809EFF4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

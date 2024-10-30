@@ -18,6 +18,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Queros.ProjectManagement.Data\Queros.ProjectManagement.Data.csproj" />
+      <ProjectReference Include="..\Queros.ProjectManagement\Queros.ProjectManagement.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,3 +1,4 @@
+using Queros.ProjectManagement;
 using Queros.ProjectManagement.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,14 +14,22 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
+app.UseRouting();
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger(options =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    options.RouteTemplate = "projectManagement/swagger/{documentname}/swagger.json";
+});
+app.UseSwaggerUI(options => {
+    options.SwaggerEndpoint("/projectManagement/swagger/v1/swagger.json", "projectManagement docs V1");
+    options.RoutePrefix = "projectManagement/swagger";
+});
 
-app.UseHttpsRedirection();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
 
 app.Run();
 
