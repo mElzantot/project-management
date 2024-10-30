@@ -7,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddProjectManagementContextServices(builder.Configuration);
+builder.Services.AddProjectManagementServices();
+builder.Services.AddControllers();
+
 
 var app = builder.Build();
 
